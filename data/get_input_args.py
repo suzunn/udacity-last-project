@@ -4,7 +4,7 @@
 #                                                                             
 # PROGRAMMER: Suleyman Arif Uzun  
 # DATE CREATED: 16/07/2024                                   
-# REVISED DATE: 
+# REVISED DATE: 17/07/2024
 # PURPOSE: Create a function that retrieves the following 3 command line inputs 
 #          from the user using the Argparse Python module. If the user fails to 
 #          provide some or all of the 3 inputs, then the default values are

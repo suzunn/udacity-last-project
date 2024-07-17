@@ -4,7 +4,7 @@
 #                                                                             
 # PROGRAMMER:   Suleyman Arif Uzun
 # DATE CREATED: 17/07/2024                                  
-# REVISED DATE: 
+# REVISED DATE: 17/07/2024
 # PURPOSE: Create a function calculates_results_stats that calculates the 
 #          statistics of the results of the programrun using the classifier's model 
 #          architecture to classify the images. This function will use the 

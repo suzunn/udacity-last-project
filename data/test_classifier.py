@@ -4,7 +4,7 @@
 #                                                                             
 # PROGRAMMER: Jennifer S.                                                    
 # DATE CREATED: 01/30/2018                                  
-# REVISED DATE:             <=(Date Revised - if any)                         
+# REVISED DATE: 17/07/2024            <=(Date Revised - if any)                         
 # PURPOSE: To demonstrate the proper usage of the classifier() function that 
 #          is defined in classifier.py This function uses CNN model 
 #          architecture that has been pretrained on the ImageNet data to 

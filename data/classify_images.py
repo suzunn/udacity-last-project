@@ -4,7 +4,7 @@
 #                                                                             
 # PROGRAMMER: Suleyman Arif Uzun
 # DATE CREATED: 17/07/2024                                    
-# REVISED DATE: 
+# REVISED DATE: 17/07/2024
 # PURPOSE: Create a function classify_images that uses the classifier function 
 #          to create the classifier labels and then compares the classifier 
 #          labels to the pet image labels. This function inputs:
