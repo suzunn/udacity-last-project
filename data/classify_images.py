@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/classify_images.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:                                 
+# PROGRAMMER: Suleyman Arif Uzun
+# DATE CREATED: 17/07/2024                                    
 # REVISED DATE: 
 # PURPOSE: Create a function classify_images that uses the classifier function 
 #          to create the classifier labels and then compares the classifier 
@@ -30,6 +30,27 @@ from classifier import classifier
 #       data type so no return is needed.
 # 
 def classify_images(images_dir, results_dic, model):
+        # Iterate over each key (filename) in results_dic
+    for key in results_dic:
+        # Construct the full path to the image
+        image_path = images_dir + "/" + key
+        
+        # Use the classifier function to get the classifier label
+        classifier_label = classifier(image_path, model)
+        
+        # Get the pet label from results_dic at index 0
+        pet_label = results_dic[key][0]
+        
+        # Compare the pet label and classifier label (ignore case)
+        if pet_label.lower() in classifier_label.lower():
+            match = 1
+        else:
+            match = 0
+        
+        # Extend the list in results_dic[key] with classifier_label and match
+        results_dic[key].extend([classifier_label, match])
+
+
     """
     Creates classifier labels with classifier function, compares pet labels to 
     the classifier labels, and adds the classifier label and the comparison of 

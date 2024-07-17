@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/get_pet_labels.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:                                  
+# PROGRAMMER: Suleyman Arif Uzun  
+# DATE CREATED: 16/07/2024                                  
 # REVISED DATE: 
 # PURPOSE: Create the function get_pet_labels that creates the pet labels from 
 #          the image's filename. This function inputs: 
@@ -24,6 +24,9 @@ from os import listdir
 #       with this function
 # 
 def get_pet_labels(image_dir):
+
+    
+   
     """
     Creates a dictionary of pet labels (results_dic) based upon the filenames 
     of the image files. These pet image labels are used to check the accuracy 
@@ -40,6 +43,29 @@ def get_pet_labels(image_dir):
       List. The list contains for following item:
          index 0 = pet image label (string)
     """
+    filename_list = listdir(image_dir)  
+    results_dic = dict()
+    
+    for filename in filename_list:
+      low_pet_image = filename.lower()
+
+      word_list_pet_image = low_pet_image.split("_")
+      
+      pet_name = ""
+    
+      for word in word_list_pet_image:
+        if word.isalpha():
+          pet_name += word + " "
+
+      pet_name = pet_name.strip()
+
+      if filename not in results_dic:
+        results_dic[filename] = [pet_name]
+      else:
+        print("warning: key =", filename,
+              "already exists in the result dictionary =",
+              results_dic[filename])
+
     # Replace None with the results_dic dictionary that you created with this
     # function
-    return None
+    return results_dic
